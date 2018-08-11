@@ -23,3 +23,7 @@ npm-debug.log
 *.log
 *.stackdump
 bower_components/
+
+
+# Local files for testing
+*zTest*
