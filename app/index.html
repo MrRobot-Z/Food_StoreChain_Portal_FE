@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="FoodApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +24,7 @@
 <div>
     <nav class="navbar navbar-expand-sm">
         <!-- Brand -->
-        <a class="navbar-brand d-inline-flex" href="#">
+        <a class="navbar-brand d-inline-flex" ui-sref="Home">
             <img src="img/logo.jpg" style="height: 75px; width: auto">
             <h1>FoodzLand</h1>
         </a>
@@ -39,10 +39,10 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-book-open"></i>Menu</a>
+                    <a class="nav-link" ui-sref="Menu"><i class="fas fa-book-open"></i>Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" ui-sref="Cart">
                         <i class="fas fa-shopping-cart"></i>Cart
                         <span class="badge badge-success ml-2">4</span>
                     </a>
@@ -51,7 +51,7 @@
 
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-user"></i>Account</a>
+                    <a class="nav-link" ui-sref="Account"><i class="fas fa-user"></i>Account</a>
                 </li>
             </ul>
         </div>
@@ -59,29 +59,7 @@
 </div>
 
 
-<h1>Hello world Placeholder</h1>
-<br>
-<h1>Hello world Placeholder</h1>
-<br>
-<h1>Hello world Placeholder</h1>
-<br>
-<h1>Hello world Placeholder</h1>
-<br>
-<h1>Hello world Placeholder</h1>
-<br>
-<h1>Hello world Placeholder</h1>
-<br>
-<h1>Hello world Placeholder</h1>
-<br>
-<h1>Hello world Placeholder</h1>
-<br>
-<h1>Hello world Placeholder</h1>
-<br>
-<h1>Hello world Placeholder</h1>
-<br>
-<h1>Hello world Placeholder</h1>
-<br>
-<h1>Hello world Placeholder</h1>
+<ui-view></ui-view>
 
 
 <!-- Footer -->
@@ -97,17 +75,17 @@
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <h5>Quick links</h5>
                 <ul class="list-unstyled quick-links">
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Menu</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Cart</a></li>
+                    <li><a ui-sref="Home"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a ui-sref="Menu"><i class="fa fa-angle-double-right"></i>Menu</a></li>
+                    <li><a ui-sref="Cart"><i class="fa fa-angle-double-right"></i>Cart</a></li>
                 </ul>
             </div>
 
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <h5>Contact Us</h5>
                 <ul class="list-unstyled quick-links">
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Account</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Feedback</a><hr></li>
+                    <li><a ui-sref="Account"><i class="fa fa-angle-double-right"></i>Account</a></li>
+                    <li><a ui-sref="#"><i class="fa fa-angle-double-right"></i>Feedback</a><hr></li>
                     <li>
                         <ul class="list-unstyled list-inline social">
                             <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -123,7 +101,7 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                <p class="h6">&copy All rights Reserved.<a class="text-green ml-2" href="#">FoodzLand</a></p>
+                <p class="h6">&copy All rights Reserved.<a class="text-green ml-2" ui-sref="Home">FoodzLand</a></p>
             </div>
         </div>
     </div>
@@ -146,10 +124,16 @@
 <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>-->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>-->
 <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>-->
+
 <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>-->
-<!--<script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>-->
+<!--<script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>-->
+
 
 <script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/controllers/mainCtrl.js"></script>
+<script type="text/javascript" src="js/controllers/menuCtrl.js"></script>
+<script type="text/javascript" src="js/controllers/cartCtrl.js"></script>
+<script type="text/javascript" src="js/controllers/accountCtrl.js"></script>
 
 </body>
 </html>
