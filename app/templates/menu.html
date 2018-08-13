@@ -1,11 +1,32 @@
 <div class="container">
 
 
-    <h1>Hello this menu html </h1>
+    <div class="jumbotron">
+        <h1 class="text-center">Menu</h1>
+    </div>
 
-    <h2>With the controller, {{ctrlName}}</h2>
+    <div class="card-deck menu-cards">
 
+        <div ng-repeat="item in menu">
+                <div class="card menu-card">
+                    <img class="img-fluid" ng-src="{{item.url}}" alt="{{item.name}}">
+                    <div class="card-body" style="padding: 10px">
+                        <h4 class="card-title">{{item.name}}</h4>
+
+                        <div class="form-group row">
+                            <!--<label for="sel1">Select Item Size:</label>-->
+                            <select class="form-control custom-select col-md-5" style="margin: 30px">
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                            </select>
+
+                            <button class="btn btn-primary btn-sm col-md-4 float-right" ng-click="addToCart(item)">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+    </div>
 
 </div>
-
-

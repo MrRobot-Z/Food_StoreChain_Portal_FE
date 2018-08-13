@@ -28,6 +28,24 @@ nav ul  li a:hover{
 }
 
 /* ****************************************************** */
+
+.view-background{
+    background-color: lavender;
+}
+
+.menu-cards{
+    column-gap: 1.5rem;
+}
+
+.menu-cards .menu-card{
+    padding-bottom: 5px;
+    margin-bottom: 5rem;
+}
+
+.menu-card:hover{
+    box-shadow: 10px 10px grey;
+}
+
 /* Footer */
 
 footer {
